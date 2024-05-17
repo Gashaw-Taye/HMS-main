@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  app:
+    image: hms-appd:dev
+    ports:
+      - "9000:8000"
+    environment:
+      DB_HOST: host.docker.internal
+    volumes:
+      - D:\bernos\HMS:/usr/src/app
+  web: 
+    image: hms-web:dev
+    ports:
+      - "3001:3000"
+    volumes:
+      - D:\bernos\web:/user/src/app
